@@ -22,6 +22,12 @@
 				</div>
 				<span class="font-medium">About</span>
 			</a>
+			<a href="/data" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-700/60 hover:shadow-md transition-all active:scale-95 group">
+				<div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+				</div>
+				<span class="font-medium">Data</span>
+			</a>
 		</nav>
 	</aside>
 

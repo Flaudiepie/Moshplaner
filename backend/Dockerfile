@@ -1,5 +1,15 @@
-FROM alpine:latest
+FROM eclipse-temurin:21-jdk-alpine AS builder
 
-# This is a placeholder for the Kotlin backend container.
-# It simply keeps the container running so the compose environment is stable.
-CMD ["tail", "-f", "/dev/null"]
+WORKDIR /app
+COPY . .
+RUN chmod +x gradlew && ./gradlew bootJar --no-daemon
+
+FROM eclipse-temurin:21-jre-alpine
+
+WORKDIR /app
+COPY --from=builder /app/build/libs/*.jar app.jar
+
+ENV PORT=8080
+EXPOSE 8080
+
+CMD ["java", "-jar", "app.jar"]

@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/${POSTGRES_DB:mydb}
+    username: ${POSTGRES_USER:myuser}
+    password: ${POSTGRES_PASSWORD:mypassword}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+app:
+  security:
+    internal-api-key: ${INTERNAL_API_KEY:secret-key-123}
