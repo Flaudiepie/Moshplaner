@@ -1,5 +1,5 @@
 import tailwindcss from '@tailwindcss/vite';
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from 'vite';
 import adapter from '@sveltejs/adapter-node';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { VitePWA } from 'vite-plugin-pwa';
@@ -28,8 +28,5 @@ export default defineConfig({
 				icons: []
 			}
 		})
-	],
-	test: {
-		include: ['src/**/*.{test,spec}.{js,ts}']
-	}
+	]
 });
